@@ -1,2 +1,3 @@
 #!/bin/bash
-docker run --name platon-nginx -v ./index.html:/usr/share/nginx/html:ro -d nginx
+docker build . --tag mynginx
+docker run --name mynginx -p 80:80 -d mynginx --restart=always
